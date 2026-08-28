@@ -69,309 +69,42 @@ Requisições malformadas (erro) também consomem a cota — por isso vale confe
 - Compare sempre o resultado da API com uma espécie já conhecida/confirmada, para calcular taxa de acerto.
 - Fotos nítidas e com boa iluminação tendem a gerar scores mais altos.
 
+## Exemplo de resposta da API (anotado)
+Abaixo, um exemplo ilustrativo de como a resposta da API costuma vir, com anotações do que cada campo significa:
+
+```json
 {
-    "query": {
-        "project": "all",
-        "images": [
-            "27a6515cabd1118760eabd551ab3ac0a"
-        ],
-        "organs": [
-            "leaf"
-        ],
-        "includeRelatedImages": false,
-        "noReject": false,
-        "type": null
-    },
-    "predictedOrgans": [
-        {
-            "image": "27a6515cabd1118760eabd551ab3ac0a",
-            "filename": "quaresmeira_folha.jpg",
-            "organ": "leaf",
-            "score": 0.90015
-        }
-    ],
-    "language": "pt",
-    "preferedReferential": "k-world-flora",
-    "bestMatch": "Pleroma granulosum (Desr.) D.Don",
-    "results": [
-        {
-            "score": 0.30567,
-            "species": {
-                "scientificNameWithoutAuthor": "Pleroma granulosum",
-                "scientificNameAuthorship": "(Desr.) D.Don",
-                "genus": {
-                    "scientificNameWithoutAuthor": "Pleroma",
-                    "scientificNameAuthorship": "",
-                    "scientificName": "Pleroma"
-                },
-                "family": {
-                    "scientificNameWithoutAuthor": "Melastomataceae",
-                    "scientificNameAuthorship": "",
-                    "scientificName": "Melastomataceae"
-                },
-                "commonNames": [
-                    "Quaresmeira"
-                ],
-                "scientificName": "Pleroma granulosum (Desr.) D.Don"
-            },
-            "gbif": {
-                "id": "5601452"
-            },
-            "powo": {
-                "id": "1028835-2"
-            }
-        },
-        {
-            "score": 0.19162,
-            "species": {
-                "scientificNameWithoutAuthor": "Pleroma urvilleanum",
-                "scientificNameAuthorship": "(DC.) P.J.F.Guim. & Michelang.",
-                "genus": {
-                    "scientificNameWithoutAuthor": "Pleroma",
-                    "scientificNameAuthorship": "",
-                    "scientificName": "Pleroma"
-                },
-                "family": {
-                    "scientificNameWithoutAuthor": "Melastomataceae",
-                    "scientificNameAuthorship": "",
-                    "scientificName": "Melastomataceae"
-                },
-                "commonNames": [
-                    "Orelha de-onça",
-                    "Manaca"
-                ],
-                "scientificName": "Pleroma urvilleanum (DC.) P.J.F.Guim. & Michelang."
-            },
-            "gbif": {
-                "id": "10863132"
-            },
-            "powo": {
-                "id": "77206410-1"
-            }
-        },
-        {
-            "score": 0.0835,
-            "species": {
-                "scientificNameWithoutAuthor": "Pleroma stenocarpum",
-                "scientificNameAuthorship": "(DC.) Triana",
-                "genus": {
-                    "scientificNameWithoutAuthor": "Pleroma",
-                    "scientificNameAuthorship": "",
-                    "scientificName": "Pleroma"
-                },
-                "family": {
-                    "scientificNameWithoutAuthor": "Melastomataceae",
-                    "scientificNameAuthorship": "",
-                    "scientificName": "Melastomataceae"
-                },
-                "commonNames": [],
-                "scientificName": "Pleroma stenocarpum (DC.) Triana"
-            },
-            "gbif": {
-                "id": "5601297"
-            },
-            "powo": {
-                "id": "574874-1"
-            }
-        },
-        {
-            "score": 0.03008,
-            "species": {
-                "scientificNameWithoutAuthor": "Rosettea princeps",
-                "scientificNameAuthorship": "(Kunth) Ver.-Lib. & G.Kadereit",
-                "genus": {
-                    "scientificNameWithoutAuthor": "Rosettea",
-                    "scientificNameAuthorship": "",
-                    "scientificName": "Rosettea"
-                },
-                "family": {
-                    "scientificNameWithoutAuthor": "Melastomataceae",
-                    "scientificNameAuthorship": "",
-                    "scientificName": "Melastomataceae"
-                },
-                "commonNames": [],
-                "scientificName": "Rosettea princeps (Kunth) Ver.-Lib. & G.Kadereit"
-            },
-            "gbif": {
-                "id": "11147712"
-            },
-            "powo": {
-                "id": "77214941-1"
-            }
-        },
-        {
-            "score": 0.01711,
-            "species": {
-                "scientificNameWithoutAuthor": "Pleroma mutabile",
-                "scientificNameAuthorship": "(Vell.) Triana",
-                "genus": {
-                    "scientificNameWithoutAuthor": "Pleroma",
-                    "scientificNameAuthorship": "",
-                    "scientificName": "Pleroma"
-                },
-                "family": {
-                    "scientificNameWithoutAuthor": "Melastomataceae",
-                    "scientificNameAuthorship": "",
-                    "scientificName": "Melastomataceae"
-                },
-                "commonNames": [
-                    "Manacá da-serra",
-                    "Cuipeúna",
-                    "Flor de-quaresma"
-                ],
-                "scientificName": "Pleroma mutabile (Vell.) Triana"
-            },
-            "gbif": {
-                "id": "5601379"
-            },
-            "powo": {
-                "id": "574841-1"
-            },
-            "iucn": {
-                "id": "148760241",
-                "category": "LC"
-            }
-        },
-        {
-            "score": 0.0151,
-            "species": {
-                "scientificNameWithoutAuthor": "Melastoma malabathricum",
-                "scientificNameAuthorship": "L.",
-                "genus": {
-                    "scientificNameWithoutAuthor": "Melastoma",
-                    "scientificNameAuthorship": "",
-                    "scientificName": "Melastoma"
-                },
-                "family": {
-                    "scientificNameWithoutAuthor": "Melastomataceae",
-                    "scientificNameAuthorship": "",
-                    "scientificName": "Melastomataceae"
-                },
-                "commonNames": [
-                    "Canela de velho",
-                    "Manacá da serra"
-                ],
-                "scientificName": "Melastoma malabathricum L."
-            },
-            "gbif": {
-                "id": "3188511"
-            },
-            "powo": {
-                "id": "570989-1"
-            }
-        },
-        {
-            "score": 0.0092,
-            "species": {
-                "scientificNameWithoutAuthor": "Pleroma heteromallum",
-                "scientificNameAuthorship": "(D.Don) D.Don",
-                "genus": {
-                    "scientificNameWithoutAuthor": "Pleroma",
-                    "scientificNameAuthorship": "",
-                    "scientificName": "Pleroma"
-                },
-                "family": {
-                    "scientificNameWithoutAuthor": "Melastomataceae",
-                    "scientificNameAuthorship": "",
-                    "scientificName": "Melastomataceae"
-                },
-                "commonNames": [
-                    "Orelha de-onça",
-                    "Quaresmeira",
-                    "Orelha de onça"
-                ],
-                "scientificName": "Pleroma heteromallum (D.Don) D.Don"
-            },
-            "gbif": {
-                "id": "5601449"
-            },
-            "powo": {
-                "id": "574812-1"
-            }
-        },
-        {
-            "score": 0.00658,
-            "species": {
-                "scientificNameWithoutAuthor": "Andesanthus lepidotus",
-                "scientificNameAuthorship": "(Humb. & Bonpl.) P.J.F.Guim. & Michelang.",
-                "genus": {
-                    "scientificNameWithoutAuthor": "Andesanthus",
-                    "scientificNameAuthorship": "",
-                    "scientificName": "Andesanthus"
-                },
-                "family": {
-                    "scientificNameWithoutAuthor": "Melastomataceae",
-                    "scientificNameAuthorship": "",
-                    "scientificName": "Melastomataceae"
-                },
-                "commonNames": [],
-                "scientificName": "Andesanthus lepidotus (Humb. & Bonpl.) P.J.F.Guim. & Michelang."
-            },
-            "gbif": {
-                "id": "10767444"
-            },
-            "powo": {
-                "id": "77205900-1"
-            },
-            "iucn": {
-                "id": "223103566",
-                "category": "LC"
-            }
-        },
-        {
-            "score": 0.00249,
-            "species": {
-                "scientificNameWithoutAuthor": "Pleroma candolleanum",
-                "scientificNameAuthorship": "(DC.) Triana",
-                "genus": {
-                    "scientificNameWithoutAuthor": "Pleroma",
-                    "scientificNameAuthorship": "",
-                    "scientificName": "Pleroma"
-                },
-                "family": {
-                    "scientificNameWithoutAuthor": "Melastomataceae",
-                    "scientificNameAuthorship": "",
-                    "scientificName": "Melastomataceae"
-                },
-                "commonNames": [
-                    "Quaresmeira da-serra",
-                    "Quaresmeira do-cerrado"
-                ],
-                "scientificName": "Pleroma candolleanum (DC.) Triana"
-            },
-            "gbif": {
-                "id": "5601584"
-            },
-            "powo": {
-                "id": "574772-1"
-            }
-        },
-        {
-            "score": 0.00185,
-            "species": {
-                "scientificNameWithoutAuthor": "Pleroma semidecandrum",
-                "scientificNameAuthorship": "(Schrank & Mart. ex DC.) Triana",
-                "genus": {
-                    "scientificNameWithoutAuthor": "Pleroma",
-                    "scientificNameAuthorship": "",
-                    "scientificName": "Pleroma"
-                },
-                "family": {
-                    "scientificNameWithoutAuthor": "Melastomataceae",
-                    "scientificNameAuthorship": "",
-                    "scientificName": "Melastomataceae"
-                },
-                "commonNames": [],
-                "scientificName": "Pleroma semidecandrum (Schrank & Mart. ex DC.) Triana"
-            },
-            "gbif": {
-                "id": "5601313"
-            },
-            "powo": {
-                "id": "574868-1"
-            }
-        }
-    ],
-    "version": "2026-03-20 (7.5)",
-    "remainingIdentificationRequests": 497
+  "query": {
+    "project": "all",
+    "images": ["foto1.jpg"],
+    "organs": ["leaf"]
+  },
+  "predictedOrgans": [
+    { "image": "foto1.jpg", "organ": "leaf", "score": 0.90 }
+  ],
+  "results": [
+    {
+      "score": 0.31,
+      "species": {
+        "scientificNameWithoutAuthor": "Nome científico da espécie",
+        "genus": { "scientificNameWithoutAuthor": "Gênero" },
+        "family": { "scientificNameWithoutAuthor": "Família" },
+        "commonNames": ["Nome popular 1", "Nome popular 2"]
+      },
+      "gbif": { "id": "0000000" }
+    }
+  ],
+  "remainingIdentificationRequests": 497
 }
+```
+
+**Como ler:**
+
+- `predictedOrgans`: o órgão que a própria API reconheceu na imagem (folha, flor, fruto, casca) — pode ser diferente do que você informou no parâmetro `organs`, e nesse caso a API confia mais na própria detecção.
+- `results`: lista ordenada da espécie mais provável para a menos provável. O primeiro item (`results[0]`) é o "melhor palpite" da API.
+- `score`: vai de 0 a 1. Quanto mais perto de 1, maior a confiança da API naquele resultado. Scores abaixo de ~0.20 costumam indicar baixa confiança — vale desconfiar e testar com outra foto (de outro órgão, com melhor luz, mais próxima).
+- `gbif.id`: identificador da espécie na base do GBIF (Global Biodiversity Information Facility), útil para cruzar com outras bases taxonômicas.
+- `remainingIdentificationRequests`: quantas identificações ainda restam na sua cota do dia.
+
+**Dica de leitura de resultado**: mesmo quando a espécie correta não aparece em 1º lugar, vale conferir se ela aparece mais abaixo na lista (`results[1]`, `results[2]`...) — isso já indica que a API "chegou perto", mesmo sem acertar de primeira.
+
